@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-function NavbarElements () {
+function NavbarElements (props) {
   return (
     <>
       <nav className={classes.Nav}>
@@ -12,7 +12,7 @@ function NavbarElements () {
           <LinkR to='/' className={classes.NavLogo}>
                 dolla
           </LinkR>
-          <div className={classes.MobileIcon}>
+          <div className={classes.MobileIcon} onClick={() => props.setIsOpen()}>
             <FaBars />
           </div>
           <ul className={classes.NavMenu}>

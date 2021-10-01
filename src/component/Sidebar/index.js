@@ -4,6 +4,7 @@ import SidebarElements from './SidebarElements';
 function Sidebar (props) {
   return (
     <SidebarElements
+      setIsOpen={props.setIsOpen}
       isOpen={props.isOpen}
     />
   );

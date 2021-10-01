@@ -1,9 +1,9 @@
 import React from 'react';
 import NavbarElements from './NavbarElements';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
-    <NavbarElements />
+    <NavbarElements setIsOpen={props.setIsOpen} />
   );
 };
 

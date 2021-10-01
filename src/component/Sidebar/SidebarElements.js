@@ -7,22 +7,23 @@ import { Link as LinkS } from 'react-scroll';
 function SidebarElements (props) {
   return (
     <aside
+      onClick={() => props.setIsOpen()}
       className={classes.SidebarContainer}
-      style={props.isOpen ? { opacity: '100%', top: '0' } : { opacity: '0', top: '100%' }}
+      style={props.isOpen ? { top: '0', opacity: '100%' } : { top: '100%', opacity: '0' }}
     >
-      <div className={classes.Icon}>
+      <div className={classes.Icon} onClick={() => props.setIsOpen()}>
         <FaTimes className={classes.CloseIcon} />
-        <div className={classes.SidebarWrapper}>
-          <ul className={classes.SidebarMenu}>
-            <LinkS to='about' className={classes.SidebarLinks}>About</LinkS>
-            <LinkS to='discover' className={classes.SidebarLinks}>Discover</LinkS>
-            <LinkS to='services' className={classes.SidebarLinks}>Services</LinkS>
-            <LinkS to='singup' className={classes.SidebarLinks}>Sing Up</LinkS>
-          </ul>
-          <nav className={classes.SidebarBtn}>
-            <LinkR to='/singin' className={classes.SidebarBtnLink}>Sing In</LinkR>
-          </nav>
-        </div>
+      </div>
+      <div className={classes.SidebarWrapper}>
+        <ul className={classes.SidebarMenu}>
+          <LinkS to='about' className={classes.SidebarLinks} onClick={() => props.setIsOpen()}>About</LinkS>
+          <LinkS to='discover' className={classes.SidebarLinks} onClick={() => props.setIsOpen()}>Discover</LinkS>
+          <LinkS to='services' className={classes.SidebarLinks} onClick={() => props.setIsOpen()}>Services</LinkS>
+          <LinkS to='singup' className={classes.SidebarLinks} onClick={() => props.setIsOpen()}>Sing Up</LinkS>
+        </ul>
+        <nav className={classes.SidebarBtn}>
+          <LinkR to='/singin' className={classes.SidebarBtnLink} onClick={() => props.setIsOpen()}>Sing In</LinkR>
+        </nav>
       </div>
     </aside>
 
