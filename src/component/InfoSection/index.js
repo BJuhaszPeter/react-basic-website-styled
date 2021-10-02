@@ -15,11 +15,7 @@ const InfoSection = (props) => {
     <>
       {renderInfoSection()}
     </>
-  // <>
-  //   <InfoElements data={data[0]} />
-  //   <InfoElements data={data[1]} />
-  //   <InfoElements data={data[2]} />
-  // </>
+
   );
 };
 
