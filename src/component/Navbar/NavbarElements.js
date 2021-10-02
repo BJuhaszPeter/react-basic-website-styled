@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-function NavbarElements (props) {
+const NavbarElements = (props) => {
   return (
     <>
       <nav className={classes.Nav}>
@@ -32,6 +32,6 @@ function NavbarElements (props) {
       </nav>
     </>
   );
-}
+};
 
 export default NavbarElements;

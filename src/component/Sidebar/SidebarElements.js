@@ -4,7 +4,7 @@ import classes from './SidebarElements.module.css';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-function SidebarElements (props) {
+const SidebarElements = (props) => {
   return (
     <aside
       onClick={() => props.setIsOpen()}
@@ -28,7 +28,7 @@ function SidebarElements (props) {
     </aside>
 
   );
-}
+};
 
 export default SidebarElements
 ;

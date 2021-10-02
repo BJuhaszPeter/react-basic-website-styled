@@ -5,7 +5,7 @@ import Video from '../../videos/video.mp4';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { Button } from '../ButtonElement';
 
-function HeroSectionElements (props) {
+const HeroSectionElements = (props) => {
   const [hover, setHover] = useState(false);
   const onHover = () => {
     setHover(!hover);
@@ -26,7 +26,7 @@ function HeroSectionElements (props) {
 
     </div>
   );
-}
+};
 
 export default HeroSectionElements
 ;
