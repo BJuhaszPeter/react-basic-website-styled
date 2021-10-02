@@ -22,11 +22,11 @@ const NavbarElements = (props) => {
             </li>
             <li className={classes.NavItems}><LinkS to='services' className={classes.NavLinks}>Services</LinkS>
             </li>
-            <li className={classes.NavItems}><LinkS to='singup' className={classes.NavLinks}>Sing Up</LinkS>
+            <li className={classes.NavItems}><LinkS to='signup' className={classes.NavLinks}>Sing Up</LinkS>
             </li>
           </ul>
           <nav className={classes.NavBtn}>
-            <LinkR to='/singin' className={classes.NavBtnLink}>Sing In</LinkR>
+            <LinkR to='/signin' className={classes.NavBtnLink}>Sing In</LinkR>
           </nav>
         </div>
       </nav>

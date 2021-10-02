@@ -23,7 +23,7 @@ const ServicesElements = () => {
     return infoSection;
   };
   return (
-    <div className={classes.ServicesContainer}>
+    <div className={classes.ServicesContainer} id='services'>
       <h1 className={classes.ServicesH1}>Our Services</h1>
       <div className={classes.ServicesWrapper}>
         {renderServicesCard()}

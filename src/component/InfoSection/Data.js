@@ -4,7 +4,7 @@ import img3 from '../../images/svg-3.svg';
 
 export const data = [
   {
-    id: 'id',
+    id: 'about',
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
@@ -20,7 +20,7 @@ export const data = [
     darkText: false
   },
   {
-    id: 'id',
+    id: 'discover',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
@@ -36,9 +36,9 @@ export const data = [
     darkText: false
   },
   {
-    id: 'id',
-    lightBg: true,
-    lightText: false,
+    id: 'signup',
+    lightBg: false,
+    lightText: true,
     lightTextDesc: true,
     topLine: 'Personal counselling',
     headline: 'Meet your highly qualified personal adviser',
@@ -47,9 +47,9 @@ export const data = [
     imgStart: true,
     img: img3,
     alt: 'Data',
-    dark: true,
-    primary: true,
-    darkText: false
+    dark: false,
+    primary: false,
+    darkText: true
   }
 ]
 ;

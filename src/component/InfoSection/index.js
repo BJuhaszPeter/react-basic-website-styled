@@ -1,8 +1,8 @@
 import React from 'react';
 import InfoElements from './InfoElements';
-import { data } from './Data';
 
 const InfoSection = (props) => {
+  const { data } = props;
   const renderInfoSection = () => {
     let infoSection = null;
     if (data) {
