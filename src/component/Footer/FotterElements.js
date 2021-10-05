@@ -2,8 +2,13 @@ import React from 'react';
 import classes from './FooterElements.module.css';
 import { Link as LinkR } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { animateScroll as scroll } from 'react-scroll';
 
 const FotterElements = () => {
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <div className={classes.FooterContainer}>
       <div className={classes.FooterWrapper}>
@@ -42,7 +47,7 @@ const FotterElements = () => {
         </div>
         <section className={classes.SocialMedia}>
           <div className={classes.SocialMediaWrapper}>
-            <LinkR className={classes.SocialMediaLogo} to='/'>dolla</LinkR>
+            <LinkR onClick={toggleHome} className={classes.SocialMediaLogo} to='/'>dolla</LinkR>
             <small className={classes.WebsiteRights}>dolla © {new Date().getFullYear()}</small>
             <div className={classes.SocialMediaIcons}>
               <a className={classes.SocialMediaLink} href='/' target='_blank' aria-label='Facebook'><FaFacebook /></a>

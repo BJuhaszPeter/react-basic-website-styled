@@ -15,7 +15,7 @@ const InfoElements = (props) => {
               <h1 className={data.lightText ? classes.Heading : classes.HeadingLight}>{data.headline}</h1>
               <p className={data.lightText ? classes.Subtitle : classes.SubtitleLight}>{data.description}</p>
               <div className={classes.BtnWrap}>
-                <Button primary={data.primary} dark={data.dark} to='home'>{data.buttonLabel}</Button>
+                <Button smooth spy duration={500} exact='true' offset={-80} primary={data.primary} dark={data.dark} to='home'>{data.buttonLabel}</Button>
               </div>
             </div>
           </div>

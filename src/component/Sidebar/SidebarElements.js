@@ -7,9 +7,10 @@ import { Link as LinkS } from 'react-scroll';
 const SidebarElements = (props) => {
   return (
     <aside
+
       onClick={() => props.setIsOpen()}
       className={classes.SidebarContainer}
-      style={props.isOpen ? { top: '0', opacity: '100%' } : { top: '100%', opacity: '0' }}
+      style={props.isOpen ? { top: '0', opacity: '100%' } : { top: '-100%', opacity: '0' }}
     >
       <div className={classes.Icon} onClick={() => props.setIsOpen()}>
         <FaTimes className={classes.CloseIcon} />
