@@ -23,7 +23,7 @@ const SidebarElements = (props) => {
           <LinkS to='singup' className={classes.SidebarLinks} onClick={() => props.setIsOpen()}>Sing Up</LinkS>
         </ul>
         <nav className={classes.SidebarBtn}>
-          <LinkR to='/singin' className={classes.SidebarBtnLink} onClick={() => props.setIsOpen()}>Sing In</LinkR>
+          <LinkR to='/signin' className={classes.SidebarBtnLink} onClick={() => props.setIsOpen()}>Sing In</LinkR>
         </nav>
       </div>
     </aside>

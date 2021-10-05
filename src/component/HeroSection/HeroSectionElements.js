@@ -20,7 +20,7 @@ const HeroSectionElements = (props) => {
         <h1 className={classes.HeroH1}> Virtual Banking Made Easy</h1>
         <p className={classes.HeroP}>Sing up for a new account today and recive $250 in credit towards your next payment.</p>
         <div className={classes.HeroBtnWrapper}>
-          <Button primary dark onMouseEnter={onHover} onMouseLeave={onHover} to='signin'>Get Started {hover ? <MdArrowForward /> : <MdKeyboardArrowRight />}</Button>
+          <Button primary dark onMouseEnter={onHover} onMouseLeave={onHover} smooth duration={500} spy exact='true' offset={-80} to='signup'>Get Started {hover ? <MdArrowForward /> : <MdKeyboardArrowRight />}</Button>
         </div>
       </div>
 
