@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItems, NavLinks, NavBtn, NavBtnLink } from './NavbarStyledComponents';
 
 const NavbarElements = (props) => {
@@ -19,7 +19,7 @@ const NavbarElements = (props) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-  console.log('scrollNav', scrollNav);
+
   return (
 
     <>
