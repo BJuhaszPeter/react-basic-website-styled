@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import classes from './NavbarElements.module.css';
-import { FaBars } from 'react-icons/fa';
-import { Link as LinkR } from 'react-router-dom';
-import { Link as LinkS, animateScroll as scroll } from 'react-scroll';
-
-import styled from 'styled-components';
+import { scroll } from 'react-scroll';
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItems, NavLinks, NavBtn, NavBtnLink } from './NavbarStyledComponents';
 
 const NavbarElements = (props) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -23,48 +19,33 @@ const NavbarElements = (props) => {
   const toggleHome = () => {
     scroll.scrollToTop();
   };
-
-  const NavLinks = styled(LinkS)`
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-
-  &.active{
-    border-bottom: 3px solid #01bf71;
-  }
-  `;
-
+  console.log('scrollNav', scrollNav);
   return (
 
     <>
 
-      <nav className={scrollNav ? classes.Nav : classes.ScrollNav}>
-        <div className={classes.NavbarContainer}>
-          <LinkR to='/' className={classes.NavLogo} onClick={toggleHome}>
+      <Nav scrollNav={scrollNav}>
+        <NavbarContainer>
+          <NavLogo to='/' onClick={toggleHome}>
                 dolla
-          </LinkR>
-          <div className={classes.MobileIcon} onClick={() => props.setIsOpen()}>
-            <FaBars />
-          </div>
-          <ul className={classes.NavMenu}>
-            <li className={classes.NavItems}><NavLinks smooth duration={500} spy exact='true' offset={-80} to='about'>About </NavLinks>
-            </li>
-            <li className={classes.NavItems}><NavLinks smooth duration={500} spy exact='true' offset={-80} to='discover'>Discover</NavLinks>
-            </li>
-            <li className={classes.NavItems}><NavLinks smooth duration={500} spy exact='true' offset={-80} to='services'>Services</NavLinks>
-            </li>
-            <li className={classes.NavItems}><NavLinks smooth duration={500} spy exact='true' offset={-80} to='signup'>Sing Up</NavLinks>
-            </li>
-          </ul>
-          <nav className={classes.NavBtn}>
-            <LinkR to='/signin' className={classes.NavBtnLink}>Sing In</LinkR>
-          </nav>
-        </div>
-      </nav>
+          </NavLogo>
+          <MobileIcon onClick={() => props.setIsOpen()} />
+
+          <NavMenu>
+            <NavItems><NavLinks smooth duration={500} spy exact='true' offset={-80} to='about'>About </NavLinks>
+            </NavItems>
+            <NavItems><NavLinks smooth duration={500} spy exact='true' offset={-80} to='discover'>Discover</NavLinks>
+            </NavItems>
+            <NavItems><NavLinks smooth duration={500} spy exact='true' offset={-80} to='services'>Services</NavLinks>
+            </NavItems>
+            <NavItems><NavLinks smooth duration={500} spy exact='true' offset={-80} to='signup'>Sing Up</NavLinks>
+            </NavItems>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to='/signin'>Sing In</NavBtnLink>
+          </NavBtn>
+        </NavbarContainer>
+      </Nav>
     </>
   );
 };
