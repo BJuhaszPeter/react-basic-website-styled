@@ -1,27 +1,26 @@
 import React from 'react';
-import classes from './SinginElmenets.module.css';
-import { Link as LinkR } from 'react-router-dom';
+import { Container, FormWrapper, Icon, FormContent, Form, FormH1, FormLabel, FormInput, Button, Text } from './SinginStyledComponents';
 
 const SinginElmenets = () => {
   return (
     <>
-      <div className={classes.Container}>
-        <div className={classes.FormWrapper}>
-          <LinkR to='/' className={classes.Icon}>dolla</LinkR>
-          <div className={classes.FormContent}>
-            <form action='#' className={classes.Form}>
-              <h1 className={classes.FormH1}>Sing in your account</h1>
-              <label className={classes.FormLabel} htmlFor='for'>Email</label>
-              <input className={classes.FormInput} type='email' required />
-              <label className={classes.FormLabel} htmlFor='for'>Passworld</label>
-              <input className={classes.FormInput} type='passsword' required />
-              <button className={classes.Button} type='submit' required>Continue</button>
-              <span className={classes.Text}>Forgot password</span>
-            </form>
-          </div>
+      <Container>
+        <FormWrapper>
+          <Icon to='/'>dolla</Icon>
+          <FormContent>
+            <Form action='#'>
+              <FormH1>Sing in your account</FormH1>
+              <FormLabel htmlFor='for'>Email</FormLabel>
+              <FormInput type='email' required />
+              <FormLabel htmlFor='for'>Passworld</FormLabel>
+              <FormInput type='passsword' required />
+              <Button type='submit' required>Continue</Button>
+              <Text>Forgot password</Text>
+            </Form>
+          </FormContent>
 
-        </div>
-      </div>
+        </FormWrapper>
+      </Container>
     </>
   );
 };
