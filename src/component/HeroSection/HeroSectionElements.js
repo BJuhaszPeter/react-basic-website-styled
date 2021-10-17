@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import classes from './HeroSectionElements.module.css';
 import Video from '../../videos/video.mp4';
-
+import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper } from './HerosectionStyledComponents';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 import { Button } from '../ButtonElement';
 
@@ -12,19 +11,19 @@ const HeroSectionElements = (props) => {
   };
 
   return (
-    <div className={classes.HeroContainer} id='home'>
-      <div className={classes.HeroBg}>
-        <video className={classes.VideoBg} autoPlay loop muted src={Video} type='video/mp4' />
-      </div>
-      <div className={classes.HeroContent}>
-        <h1 className={classes.HeroH1}> Virtual Banking Made Easy</h1>
-        <p className={classes.HeroP}>Sing up for a new account today and recive $250 in credit towards your next payment.</p>
-        <div className={classes.HeroBtnWrapper}>
+    <HeroContainer id='home'>
+      <HeroBg>
+        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+      </HeroBg>
+      <HeroContent>
+        <HeroH1> Virtual Banking Made Easy</HeroH1>
+        <HeroP>Sing up for a new account today and recive $250 in credit towards your next payment.</HeroP>
+        <HeroBtnWrapper>
           <Button primary dark onMouseEnter={onHover} onMouseLeave={onHover} smooth duration={500} spy exact='true' offset={-80} to='signup'>Get Started {hover ? <MdArrowForward /> : <MdKeyboardArrowRight />}</Button>
-        </div>
-      </div>
+        </HeroBtnWrapper>
+      </HeroContent>
 
-    </div>
+    </HeroContainer>
   );
 };
 
