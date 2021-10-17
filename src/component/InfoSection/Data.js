@@ -5,7 +5,7 @@ import img3 from '../../images/svg-3.svg';
 export const data = [
   {
     id: 'about',
-    lightBg: true,
+    lightBg: false,
     lightText: false,
     lightTextDesc: true,
     topLine: 'Premium Bank',
@@ -21,7 +21,7 @@ export const data = [
   },
   {
     id: 'discover',
-    lightBg: false,
+    lightBg: true,
     lightText: true,
     lightTextDesc: true,
     topLine: 'Unlimited Access',
@@ -37,7 +37,7 @@ export const data = [
   },
   {
     id: 'signup',
-    lightBg: false,
+    lightBg: true,
     lightText: true,
     lightTextDesc: true,
     topLine: 'Personal counselling',

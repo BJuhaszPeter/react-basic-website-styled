@@ -1,32 +1,32 @@
 import React from 'react';
 import { Button } from '../ButtonElement';
-import classes from './InfoElements.module.css';
+import { InfoContainer, InfoWrapper, InfoRow, Collumn1, TextWraper, TopLine, Heading, Subtitle, BtnWrap, Collumn2, ImgWrap, Img } from './InfoSectionStyledComponents';
 
 const InfoElements = (props) => {
   const { data } = props;
 
   return (
-    <div className={data.lightBg ? classes.InfoContainerDark : classes.InfoContainerLight} id={data.id}>
-      <div className={classes.InfoWrapper}>
-        <div className={data.imgStart ? classes.InfoRow : classes.InfoRowImageStart}>
-          <div className={classes.Collumn1}>
-            <div className={classes.TextWraper}>
-              <p className={classes.TopLine}>{data.topLine}</p>
-              <h1 className={data.lightText ? classes.Heading : classes.HeadingLight}>{data.headline}</h1>
-              <p className={data.lightText ? classes.Subtitle : classes.SubtitleLight}>{data.description}</p>
-              <div className={classes.BtnWrap}>
+    <InfoContainer lightBg={data.lightBg} id={data.id}>
+      <InfoWrapper>
+        <InfoRow imgStart={data.imgStart}>
+          <Collumn1>
+            <TextWraper>
+              <TopLine>{data.topLine}</TopLine>
+              <Heading lightText={data.lightText}>{data.headline}</Heading>
+              <Subtitle lightText={data.lightText}>{data.description}</Subtitle>
+              <BtnWrap>
                 <Button smooth spy duration={500} exact='true' offset={-80} primary={data.primary} dark={data.dark} to='home'>{data.buttonLabel}</Button>
-              </div>
-            </div>
-          </div>
-          <div className={classes.Collumn2}>
-            <div className={classes.ImgWrap}>
-              <img className={classes.Img} alt={data.alt} src={data.img} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </BtnWrap>
+            </TextWraper>
+          </Collumn1>
+          <Collumn2>
+            <ImgWrap>
+              <Img alt={data.alt} src={data.img} />
+            </ImgWrap>
+          </Collumn2>
+        </InfoRow>
+      </InfoWrapper>
+    </InfoContainer>
   );
 };
 
